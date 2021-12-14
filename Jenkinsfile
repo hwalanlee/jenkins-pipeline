@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build with Packer') {
             steps {
-                echo 'Building with Packer..'
+                echo 'Building with Packer..'                
             }
         }
         stage('Deploy second asg') {
@@ -13,9 +13,9 @@ pipeline {
             }
         }
         stage('Switch asg') {
-            
-                echo 'Switching asg....'
-            
+            steps {
+                echo 'Switching asg..'
+            }
         }
     }
 }
